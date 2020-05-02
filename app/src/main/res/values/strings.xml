@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Notification Scheduler</string>
+    <string name="none">None</string>
+    <string name="any">Any</string>
+    <string name="wifi">Wifi</string>
+    <string name="network_type_required">Network Type Required</string>
+    <string name="requires">Requires:</string>
+    <string name="override_deadline_not_set">Override Deadline: Not Set</string>
+    <string name="device_idle">Device Idle</string>
+    <string name="device_charging">Device Charging</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="cancel_jobs">Cancel Jobs</string>
+</resources>
