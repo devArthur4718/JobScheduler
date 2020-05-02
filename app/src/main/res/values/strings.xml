@@ -10,4 +10,6 @@
     <string name="device_charging">Device Charging</string>
     <string name="schedule_job">Schedule Job</string>
     <string name="cancel_jobs">Cancel Jobs</string>
+    <string name="notification">description</string>
+    <string name="reply">reply</string>
 </resources>
