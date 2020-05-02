@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/rbNetWorkType"
+        android:id="@+id/rbNetworkOptions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/rbNone"
+            android:id="@+id/rbNoNetwork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -34,14 +34,14 @@
             android:text="@string/none" />
 
         <RadioButton
-            android:id="@+id/rbAny"
+            android:id="@+id/rbAnyNetwork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="8dp"
             android:text="@string/any" />
 
         <RadioButton
-            android:id="@+id/rbWifi"
+            android:id="@+id/rbwifiNetwork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="8dp"
@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/requires"
-        app:layout_constraintStart_toStartOf="@+id/rbNetWorkType"
-        app:layout_constraintTop_toBottomOf="@+id/rbNetWorkType" />
+        app:layout_constraintStart_toStartOf="@+id/rbNetworkOptions"
+        app:layout_constraintTop_toBottomOf="@+id/rbNetworkOptions" />
 
     <Switch
         android:id="@+id/switch1"
