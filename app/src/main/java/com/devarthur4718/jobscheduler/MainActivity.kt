@@ -36,16 +36,24 @@ class MainActivity : AppCompatActivity() {
                 NotificationJobService::class.java.name
             )
 
-            when (selectedNetworkOptions) {
-                JobInfo.NETWORK_TYPE_NONE -> it.context.showToast("Please set at least one Constraint")
-                else -> {
-                    val myJobInfo = JobInfo.Builder(JOB_ID, serviceName).apply {
-                        setRequiredNetworkType(selectedNetworkOptions)
-                    }.build()
-                    mScheduler?.schedule(myJobInfo)
-                    it.context.showToast("Job Scheduled, job will run when \n the constraints are met.")
-                }
+            var constraintSet = selectedNetworkOptions != JobInfo.NETWORK_TYPE_NONE
+                    || mDeviceChargingSwitch.isChecked || mDeviceIdleSwitch.isChecked
+
+            if(constraintSet){
+                val myJobInfo = JobInfo.Builder(JOB_ID, serviceName).apply {
+                    setRequiredNetworkType(selectedNetworkOptions)
+                    setRequiresDeviceIdle(mDeviceIdleSwitch.isChecked)
+                    setRequiresCharging(mDeviceChargingSwitch.isChecked)
+                }.build()
+                mScheduler?.schedule(myJobInfo)
+                it.context.showToast("Job Scheduled, job will run when \n the constraints are met.")
+
+            }else{
+                it.context.showToast("Please set at least one Constraint")
             }
+
+
+
         }
 
         btnCancel.setOnClickListener {

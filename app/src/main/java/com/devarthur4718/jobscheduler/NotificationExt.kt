@@ -73,6 +73,8 @@ fun Context.showNotificationTap(
 
     builder
         .setContentIntent(pendingIntent)
+        .setPriority(NotificationCompat.PRIORITY_HIGH)
+        .setDefaults(NotificationCompat.DEFAULT_ALL)
         .setAutoCancel(true)
 
     with(NotificationManagerCompat.from(this)) {

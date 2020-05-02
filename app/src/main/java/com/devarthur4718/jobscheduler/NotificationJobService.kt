@@ -9,7 +9,7 @@ class NotificationJobService() : JobService() {
 
     companion object{
         const val PRIMARY_CHANNEL_ID = "primary_notification_channel"
-  
+
     }
 
     lateinit var mNotifyManager : NotificationManager
@@ -24,7 +24,7 @@ class NotificationJobService() : JobService() {
         applicationContext.showNotificationTap(
             R.drawable.ic_android_black_24dp,
             "Job service",
-            "Your Job is Running",
+            "Your Job ran to completion",
             PRIMARY_CHANNEL_ID,
             MainActivity::class.java,
             true
