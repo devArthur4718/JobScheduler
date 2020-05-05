@@ -14,6 +14,3 @@ An android sample app that uses JobScheduler API for schedule jobs to work in sp
 * Android Studio Version 3.6.1 
 * Gradle Version 5.6.4 
 
-# Project contents
-
-https://developer.android.com/guide/topics/ui/custom-components
