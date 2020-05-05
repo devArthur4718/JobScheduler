@@ -16,5 +16,4 @@ An android sample app that uses JobScheduler API for schedule jobs to work in sp
 
 # Project contents
 
-https://developer.android.com/reference/android/app/job/JobScheduler 
-https://codelabs.developers.google.com/codelabs/android-training-job-scheduler/index.html#2
+https://developer.android.com/guide/topics/ui/custom-components
